@@ -6,6 +6,14 @@ outputs its bytes as unformatted lowercase hexadecimal characters.
 - Boost
 - A C++17 compiler
 
+## Quick Start
+```sh
+$ git clone https://github.com/thomasebsmith/simplexxd.git
+$ cd simplexxd
+$ make
+$ ./build/simplexxd myfile
+```
+
 ## License
 simplexxd is licensed under the MIT License. See [LICENSE](./LICENSE) for
 details.
