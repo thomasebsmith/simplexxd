@@ -269,12 +269,15 @@ int main(int argc, char **argv) {
 
   using namespace boost::interprocess;
 
+  // Memory-map the file.
   file_mapping file{argv[1], read_only};
   mapped_region region{file, read_only};
 
   auto addr_begin = (unsigned char *) region.get_address();
   auto addr_end = addr_begin + region.get_size();
 
+  // Read the entire memory-mapped region, outputting two hex characters for
+  // each byte.
   for (auto addr = addr_begin; addr < addr_end; ++addr) {
     unsigned char ch = *addr;
     putchar_unlocked(bytes[ch * 2]);
