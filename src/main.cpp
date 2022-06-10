@@ -3,14 +3,17 @@
 #include <boost/interprocess/mapped_region.hpp>
 #include <cstdio>
 
+// An exclusive upper bound on the value of an unsigned byte.
 constexpr static std::size_t byte_max_value = 256;
 
+// The lowercase digits used for representing hexdecimal numbers (0-f).
 constexpr static std::array<unsigned char, 16> hex_digits{
   '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'
 };
 
 using hex_array = std::array<unsigned char, byte_max_value * 2>;
 
+// Creates an array, mapping (byte, upper/lower digit) -> hex digit.
 constexpr hex_array create_hex_digits_by_byte() {
   hex_array result{};
   for (std::size_t byt = 0; byt < byte_max_value; ++byt) {
