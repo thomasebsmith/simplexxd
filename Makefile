@@ -19,5 +19,6 @@ DIFF = diff
 .PHONY: runtests
 runtests: ${EXECUTABLE}
 	for testdir in ./tests/*; do \
+		printf 'Running %s...\n' "$$testdir"; \
 		${EXECUTABLE} $$testdir/input | ${DIFF} $$testdir/output - || exit 1; \
 	done
