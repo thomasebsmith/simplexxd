@@ -4,7 +4,8 @@ outputs its bytes as unformatted lowercase hexadecimal characters.
 
 ## Prerequisites
 - Boost
-- A C++17 compiler
+- A C++17 compiler, aliased as `g++`
+- make
 
 ## Quick Start
 ```sh
