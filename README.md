@@ -3,7 +3,7 @@ simplexxd is a fast, straightforward hexdump utility. It reads a file and
 outputs its bytes as unformatted lowercase hexadecimal characters.
 
 ## Prerequisites
-- Boost
+- Boost (with its headers available to include in C++ source files)
 - A C++17 compiler, aliased as `g++`
 - make
 
