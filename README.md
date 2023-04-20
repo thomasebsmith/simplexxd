@@ -18,3 +18,7 @@ $ ./build/simplexxd myfile
 ## License
 simplexxd is licensed under the MIT License. See [LICENSE](./LICENSE) for
 details.
+
+## Copyright
+simplexxd was created by Thomas Smith and is copyright &copy; 2022-2023 Thomas
+Smith.
